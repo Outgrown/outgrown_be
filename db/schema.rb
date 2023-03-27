@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2023_03_24_200619) do
     t.integer "status", default: 0
     t.string "image_link"
     t.string "alt_image"
-    t.string "type"
+    t.string "article_type"
     t.integer "age_group"
     t.string "color"
     t.integer "gender"
