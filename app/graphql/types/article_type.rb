@@ -4,13 +4,13 @@ module Types
   class ArticleType < Types::BaseObject
     field :id, ID, null: false
     field :name, String
-    field :status, Integer
+    field :status, String
     field :image_link, String
     field :alt_image, String
-    field :article_type, Integer
-    field :age_group, Integer
+    field :article_type, String
+    field :age_group, String
     field :color, String
-    field :gender, Integer
+    field :gender, String
     field :condition, String
     field :description, String
     field :price, Integer

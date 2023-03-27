@@ -6,7 +6,7 @@ class Article < ApplicationRecord
         available: 1, 
         pending: 2                
     }
-    enum type: {
+    enum article_type: {
         bottoms: 0,
         tops: 1, 
         dresses: 2,
