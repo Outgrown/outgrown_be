@@ -13,5 +13,15 @@ module Types
     def find_article(name:)
       Article.find_by(name: name)
     end
+
+    field :articles,
+    Types::ArticleType,
+    null: false,
+    description: "Return all articles"
+
+    def articles
+      Article.all
+    end
+
   end
 end
