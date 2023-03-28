@@ -12,42 +12,17 @@ class Mutations::CreateArticle < Mutations::BaseMutation
   argument :price, Integer, required: true
   argument :user_id, Integer, required: true
 
+  field :success, Boolean, null: false
   field :article, Types::ArticleType, null: false
   field :errors, [String], null: false
 
-  def resolve(
-    name:,
-    status:,
-    image_link:,
-    alt_image:,
-    article_type:,
-    age_group:,
-    color:,
-    gender:,
-    condition:,
-    description:,
-    price:,
-    user_id:
-  )
-    article = Article.new(
-      name: name,
-      status: status,
-      image_link: image_link,
-      alt_image: alt_image,
-      article_type: article_type,
-      age_group: age_group,
-      color: color,
-      gender: gender,
-      condition: condition,
-      description: description,
-      price: price,
-      user_id: user_id
-    )
+  def resolve(**args)
+    article = Article.new(args)
 
     if article.save
-      { article: article, errors: [] }
+      { success: true, article: article, errors: [] }
     else
-      { user: nil, errors: article.errors.full_messages }
+      { success: false, user: nil, errors: article.errors.full_messages }
     end
   end
 end
