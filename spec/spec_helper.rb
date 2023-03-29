@@ -5,7 +5,7 @@
 # files.
 #
 
-
+require 'rspec/rails'
 require 'simplecov'
 SimpleCov.start
 # Given that it is always loaded, you are encouraged to keep this file as
