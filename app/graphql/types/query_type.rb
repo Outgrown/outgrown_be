@@ -5,9 +5,9 @@ module Types
     include GraphQL::Types::Relay::HasNodesField
 
     field :find_article,
-    Types::ArticleType,
-    null: false,
-    description: "Return a specific article record" do
+          Types::ArticleType,
+          null: false,
+          description: 'Return a specific article record' do
       argument :id, ID, required: false
       argument :name, String, required: false
     end
@@ -16,9 +16,9 @@ module Types
     end
 
     field :find_articles,
-    [Types::ArticleType],
-    null: false,
-    description: "Return a collection of matching article records" do
+          [Types::ArticleType],
+          null: false,
+          description: 'Return a collection of matching article records' do
       argument :id, ID, required: false
       argument :status, String, required: false
       argument :article_type, String, required: false
@@ -32,13 +32,22 @@ module Types
     end
 
     field :all_articles,
-    [Types::ArticleType],
-    null: false,
-    description: "Return all articles"
+          [Types::ArticleType],
+          null: false,
+          description: 'Return all articles'
 
     def all_articles
       Article.all
     end
 
+    field :find_user,
+          Types::UserType,
+          null: false,
+          description: 'finds a user by id' do
+      argument :id, ID, required: false
+    end
+    def find_user(id:)
+      User.find_by(id: id)
+    end
   end
 end
