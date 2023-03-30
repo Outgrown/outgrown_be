@@ -4,9 +4,10 @@
 # this file to always be loaded, without a need to explicitly require it in any
 # files.
 #
-
-require 'rspec/rails'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rails/all'
 require 'simplecov'
+require 'factory_bot_rails'
 SimpleCov.start
 # Given that it is always loaded, you are encouraged to keep this file as
 # light-weight as possible. Requiring heavyweight dependencies from this file
