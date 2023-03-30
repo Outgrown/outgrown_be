@@ -35,11 +35,10 @@ module Types
           [Types::ArticleType],
           null: false,
           description: 'Return all articles'
-
     def all_articles
       Article.all
     end
-
+    
     field :find_user,
           Types::UserType,
           null: false,
