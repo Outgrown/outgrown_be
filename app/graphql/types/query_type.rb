@@ -39,6 +39,5 @@ module Types
     def all_articles
       Article.all
     end
-
   end
 end
