@@ -27,7 +27,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'faker'
 gem 'factory_bot_rails'
-gem "graphql", "~> 2.0"
+gem "graphql"
 gem 'sprockets', '~> 3'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
@@ -37,6 +37,7 @@ group :test do
   gem "rspec-rails"
   gem "shoulda-matchers"
   gem 'simplecov'
+  gem 'rspec-graphql_matchers'
 end
 
 group :development, :test do
