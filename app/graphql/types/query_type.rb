@@ -28,6 +28,7 @@ module Types
       argument :user_id, ID, required: false
     end
     def find_articles(**args)
+      args.each { |key, value| args.delete(key) if value == nil }
       Article.where(args)
     end
 
