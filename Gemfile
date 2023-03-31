@@ -29,6 +29,7 @@ gem 'faker'
 gem 'factory_bot_rails'
 gem "graphql"
 gem 'sprockets', '~> 3'
+gem 'rack-cors'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
