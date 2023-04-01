@@ -7,10 +7,12 @@ class Article < ApplicationRecord
         pending: 2                
     }
     enum article_type: {
-        bottoms: 0,
-        tops: 1, 
-        dresses: 2,
-        other: 3
+        tops: 0,
+        pants: 1, 
+        activewear: 2,
+        formal: 3,
+        onesies: 4,
+        other: 5
     }
     enum age_group: {
         baby: 0,
@@ -20,8 +22,8 @@ class Article < ApplicationRecord
     }
     enum gender: {
         unisex: 0,
-        male: 1,
-        female: 2
+        boy: 1,
+        girl: 2
     }
     enum condition: {
         fair: 0,
