@@ -11,7 +11,7 @@ describe Types::QueryType, type: :request do
     }
   end
 
-  it 'can create a user' do
+  it 'finds article based on variable passed as query' do
     payload = {
       "query": "query findArticle ($id: ID!) { 
         findArticle (id: $id) { 
