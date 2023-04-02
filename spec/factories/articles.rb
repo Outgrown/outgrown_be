@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :article do
     name { Faker::Games::Minecraft.item }
-    status { [0, 1 , 2].sample }
+    status { [0, 1, 2].sample }
     image_link { Faker::Internet.domain_name }
     alt_image { Faker::Quotes::Shakespeare.as_you_like_it_quote }
-    type { [0, 1, 2, 3].sample }
+    article_type { [0, 1, 2, 3].sample }
     age_group { [0, 1, 2, 3].sample }
     color { Faker::Color.color_name }
     gender { [0, 1, 2].sample }
