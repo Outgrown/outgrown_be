@@ -6,6 +6,7 @@ describe Types::MutationType, type: :request do
     @user1    = create(:user)
     @user2    = create(:user)
     @article1 = create(:article, status: "available", user: @user1)
+    @article2 = create(:article, status: "unavailable", user: @user1)
     @headers  = {
       'CONTENT_TYPE': 'application/json',
       'ACCEPT': 'application/json'
@@ -42,6 +43,36 @@ describe Types::MutationType, type: :request do
     expect(article.dig(:errors, 0)).to eq("unable to find user")
     expect(article.dig(:errors, 1)).to be_a(String)
     expect(article.dig(:errors, 1)).to eq("unable to find article")
+  end
+
+  it 'errors on article with status of "unavailable"' do
+    expect(@article2[:user_id]).to eq(@user1[:id])
+
+    payload = {
+      "query": "mutation updateArticle ($article: UpdateArticleInput!) { 
+        updateArticle (input: $article) { 
+          article {
+            id 
+            name 
+            user { id name } 
+          }
+          errors
+        } 
+      }",
+      "variables": { "article": { "id": "#{@article2.id}", "userId": "#{@user2.id}" } }
+    }
+
+    post '/graphql', headers: @headers, params: JSON.generate(payload)
+
+    article = JSON.parse(response.body, symbolize_names: true).dig(:data, :updateArticle)
+
+    expect(response).to be_successful
+    expect(article).to have_key(:article)
+    expect(article[:article]).to eq(nil)
+    expect(article).to have_key(:errors)
+    expect(article[:errors]).to be_a(Array)
+    expect(article.dig(:errors, 0)).to be_a(String)
+    expect(article.dig(:errors, 0)).to eq("unable to trade unavailable article")
   end
 
   it 'updates article associated user_id' do
