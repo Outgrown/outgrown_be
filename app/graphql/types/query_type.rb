@@ -49,5 +49,13 @@ module Types
     def find_user(id:)
       User.find_by(id: id)
     end
+
+    field :all_users,
+          [Types::UserType],
+          null: false,
+          description: 'Return all users'
+    def all_users
+      User.all
+    end
   end
 end
