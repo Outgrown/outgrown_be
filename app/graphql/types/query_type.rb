@@ -39,7 +39,7 @@ module Types
     def all_articles
       Article.all
     end
-    
+
     field :find_user,
           Types::UserType,
           null: false,
