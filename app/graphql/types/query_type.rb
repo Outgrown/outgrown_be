@@ -35,9 +35,11 @@ module Types
     field :all_articles,
           [Types::ArticleType],
           null: false,
-          description: 'Return all articles'
-    def all_articles
-      Article.all
+          description: 'Return all articles' do
+            argument :limit, Int, required: false
+          end
+    def all_articles(limit: Article.all.length)
+      Article.all.limit(limit)
     end
 
     field :find_user,
