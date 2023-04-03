@@ -5,14 +5,18 @@ module Types
     include GraphQL::Types::Relay::HasNodesField
 
     field :find_article,
-          Types::ArticleType,
-          null: false,
-          description: 'Return a specific article record' do
+    Types::ArticleType,
+    null: true,
+    description: 'Return a specific article record' do
       argument :id, ID, required: false
       argument :name, String, required: false
     end
     def find_article(**args)
-      Article.find_by(args)
+      if args.present?
+        Article.find_by(args)
+      else
+        { article: nil }
+      end
     end
 
     field :find_articles,

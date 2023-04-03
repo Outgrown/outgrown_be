@@ -1,17 +1,12 @@
 require 'rails_helper'
 
-describe Types::QueryType, type: :request do
+RSpec.describe Types::QueryType, type: :request do
   before(:each) do
-    Article.delete_all
-    @users    = create_list(:user, 10)
     @headers  = {
       'CONTENT_TYPE': 'application/json',
       'ACCEPT': 'application/json'
     }
-  end
-
-  it 'finds all users in the database' do
-    payload = {
+    @payload = {
       "query": "query allUsers { 
         allUsers { 
           id 
@@ -20,11 +15,23 @@ describe Types::QueryType, type: :request do
       }",
       "variables": {}
     }
+  end
 
-    post '/graphql', headers: @headers, params: JSON.generate(payload)
+  it 'finds empty list for empty database' do
+    post '/graphql', headers: @headers, params: JSON.generate(@payload)
 
     users = JSON.parse(response.body, symbolize_names: true).dig(:data, :allUsers)
-    user  = users[0]
+
+    expect(response).to be_successful
+    expect(users).to eq([])
+  end
+
+  it 'finds all users in the database' do
+    @users = create_list(:user, 10)
+    post '/graphql', headers: @headers, params: JSON.generate(@payload)
+
+    users  = JSON.parse(response.body, symbolize_names: true).dig(:data, :allUsers)
+    user   = users[0]
 
     expect(response).to be_successful
     expect(User.find_by(id: user[:id])).to be_a(User)

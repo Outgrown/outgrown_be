@@ -1,14 +1,46 @@
 require 'rails_helper'
 
-describe Types::QueryType, type: :request do
+RSpec.describe Types::QueryType, type: :request do
   before(:each) do
-    Article.delete_all
     @user1    = create(:user)
     @article1 = create(:article, user: @user1)
     @headers  = {
       'CONTENT_TYPE': 'application/json',
       'ACCEPT': 'application/json'
     }
+  end
+
+  it 'finds nil if no variable passed as query' do
+    payload = {
+      "query": "query findArticle { 
+        findArticle { 
+          id 
+          name 
+          status 
+          imageLink 
+          altImage 
+          articleType 
+          ageGroup 
+          color 
+          gender 
+          condition 
+          description 
+          price 
+          user { id name } 
+        } 
+      }",
+      "variables": {}
+    }
+
+    post '/graphql', headers: @headers, params: JSON.generate(payload)
+
+    article = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to be_successful
+    expect(article[:data]).to have_key(:findArticle)
+    expect(article.dig(:data, :findArticle)).to eq(nil)
+    expect(article).to have_key(:errors)
+    expect(article.dig(:errors, 0, :message)).to eq("Cannot return null for non-nullable field Article.id")
   end
 
   it 'finds article based on variable passed as query' do
