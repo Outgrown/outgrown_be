@@ -38,7 +38,7 @@ module Types
           description: 'Return all articles' do
             argument :limit, Int, required: false
           end
-    def all_articles(limit:)
+    def all_articles(limit: Article.all.length)
       Article.all.limit(limit)
     end
     
