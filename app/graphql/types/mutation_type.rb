@@ -6,7 +6,10 @@ module Types
     field :create_article,
     mutation: Mutations::CreateArticle
 
-    field :update_article,
-    mutation: Mutations::UpdateArticle
+    field :update_article_user,
+    mutation: Mutations::UpdateArticleUser
+
+    field :update_article_status,
+    mutation: Mutations::UpdateArticleStatus
   end
 end
