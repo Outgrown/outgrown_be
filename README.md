@@ -1,6 +1,10 @@
 # README
 ## Outgrown BE
 
+A place built for those who pine, to leave pants and shirts from the past behind! 
+Trade articles of children's clothing with other users who see greater value in useable 
+clothing for their child(ren) over memories of how dirty they had gotten them!
+
 <a name="readme-top"></a>
 
 <details>
@@ -44,6 +48,8 @@
   * Microservice integration and implementation
   * Service integration and implementation
   * Efficient API exposure
+  * GraphQL integration
+  * Postman Mock Server & JSON Contract
 
   ### Built With
 
@@ -60,12 +66,14 @@
     - [x] Readme: Users Get API keys<br>
     - [x] Readme: Happy Path Endpoint Use<br>
     - [x] Setup Repo and Push to Github<br>
+    - [x] Queries: Users<br>
+    - [x] Queries: Articles<br>
+    - [x] Mutations: Users<br>
+    - [x] Mutations: Articles<br>
   </details>
   <details>
     <summary>In Progress</summary>
-    - [ ] Extension: Favorite-Delete<br>
-    - [ ] Extension: Caching/Backgorund_Workers<br>
-    - [ ] Extension: Authentication<br>
+    - [ ] Testing
   </details>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -106,7 +114,7 @@
 
   - Organization: 'https://github.com/Outgrown'
   - Try it now: <br>
-  'http://localhost:3000/graphiql'<br>
+  'http://outgrown-be.herokuapp.com/graphiql'<br>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
