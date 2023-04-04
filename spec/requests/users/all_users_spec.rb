@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Types::QueryType, type: :request do
   before(:each) do
-    @headers  = {
+    @headers = {
       'CONTENT_TYPE': 'application/json',
       'ACCEPT': 'application/json'
     }

@@ -3,7 +3,7 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require 'simplecov'
 SimpleCov.start
-SimpleCov.add_filter ['config']
+SimpleCov.add_filter ['config', 'controllers/graphql_controller', 'graphql/outgrown_be_schema']
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
