@@ -1,9 +1,9 @@
 # README
 ## Outgrown BE
 
-A place built for those who pine, to leave pants and shirts from the past behind! 
-Trade articles of children's clothing with other users who see greater value in useable 
-clothing for their child(ren) over memories of how dirty they had gotten them!
+A marketplace built for those who pine, to leave pants and shirts from the past behind! <br>
+Trade articles of children's clothing with like minded shoppers who see greater value in obtaining useable 
+clothing for their child(ren) over hoarding piles of stuff that only serve to remind us of how dirty they had made them!
 
 <a name="readme-top"></a>
 
