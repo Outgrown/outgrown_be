@@ -1,4 +1,4 @@
-class Mutations::UpdateArticle < Mutations::BaseMutation
+class Mutations::UpdateArticleUser < Mutations::BaseMutation
   argument :id, ID, required: true
   argument :user_id, ID, required: true
 
