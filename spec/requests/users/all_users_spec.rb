@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe Types::QueryType, type: :request do
   before(:each) do
-    Article.delete_all
     @users    = create_list(:user, 10)
     @headers  = {
       'CONTENT_TYPE': 'application/json',

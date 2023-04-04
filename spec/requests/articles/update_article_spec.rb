@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe Types::MutationType, type: :request do
   before(:each) do
-    Article.delete_all
     @user1    = create(:user)
     @user2    = create(:user)
     @article1 = create(:article, status: "available", user: @user1)

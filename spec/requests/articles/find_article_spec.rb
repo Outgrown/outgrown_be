@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe Types::QueryType, type: :request do
   before(:each) do
-    Article.delete_all
     @user1    = create(:user)
     @article1 = create(:article, user: @user1)
     @headers  = {
