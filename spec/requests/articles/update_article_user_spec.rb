@@ -32,8 +32,6 @@ describe Types::MutationType, type: :request do
 
     article = JSON.parse(response.body, symbolize_names: true).dig(:data, :updateArticleUser)
 
-    binding.pry
-
     expect(response).to be_successful
     expect(article).to have_key(:article)
     expect(article[:article]).to eq(nil)
