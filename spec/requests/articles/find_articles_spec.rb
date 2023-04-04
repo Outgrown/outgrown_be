@@ -72,6 +72,27 @@ describe Types::QueryType, type: :request do
     expect(article[:user][:id]).to eq(@article1[:user_id].to_s)
   end
 
+  it 'finds empty array if missing value passed' do
+    payload = {
+      "query": "query findArticles ($status: String) { 
+        findArticles (status: $status) { 
+          id 
+          name 
+          user { id name } 
+        } 
+      }",
+      "variables": { "status": "10" }
+    }
+
+    post '/graphql', headers: @headers, params: JSON.generate(payload)
+
+    articles = JSON.parse(response.body, symbolize_names: true).dig(:data, :findArticles)
+
+    expect(response).to be_successful
+    expect(articles).to be_a(Array)
+    expect(articles.empty?).to be(true)
+  end
+
   it 'finds articles based on variable(s) passed as query' do
     payload = {
       "query": "query findArticles ($status: String) { 
