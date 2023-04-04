@@ -16,7 +16,7 @@ class Article < ApplicationRecord
     }
     enum age_group: {
         baby: 0,
-        todler: 1,
+        toddler: 1,
         little_kid: 2,
         big_kid: 3 
     }
