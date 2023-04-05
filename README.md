@@ -158,7 +158,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 
   Example Response:
 
-    ![alt text](app/assets/images/readme/articles/readme-all_articles-response.png)
+  ![alt text](app/assets/images/readme/articles/readme-all_articles-response.png)
   </details>
 
   <details>
@@ -216,7 +216,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 
   Example Response:
 
-    ![alt text](app/assets/images/readme/articles/readme-create_article-response.png)
+  ![alt text](app/assets/images/readme/articles/readme-create_article-response.png)
   </details>
 
   <details>
@@ -258,7 +258,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 
   Example Response:
 
-    ![alt text](app/assets/images/readme/articles/readme-find_article-response.png)
+  ![alt text](app/assets/images/readme/articles/readme-find_article-response.png)
   </details>
 
   <details>
@@ -301,7 +301,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 
   Example Response:
 
-    ![alt text](app/assets/images/readme/articles/readme-find_articles-response.png)
+  ![alt text](app/assets/images/readme/articles/readme-find_articles-response.png)
   </details>
 
   <details>
@@ -340,7 +340,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 
   Example Response:
 
-    ![alt text](app/assets/images/readme/articles/readme-update_article_user-response.png)
+  ![alt text](app/assets/images/readme/articles/readme-update_article_user-response.png)
   </details>
 
   <details>
@@ -379,7 +379,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 
   Example Response:
 
-    ![alt text](app/assets/images/readme/articles/readme-update_article_status-response.png)
+  ![alt text](app/assets/images/readme/articles/readme-update_article_status-response.png)
   </details>
 
   ### Users
@@ -406,7 +406,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 
   Example Response:
 
-    ![alt text](app/assets/images/readme/users/readme-all_users-response.png)
+  ![alt text](app/assets/images/readme/users/readme-all_users-response.png)
   </details>
 
   <details>
@@ -438,7 +438,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 
   Example Response:
 
-    ![alt text](app/assets/images/readme/users/readme-create_user-response.png)
+  ![alt text](app/assets/images/readme/users/readme-create_user-response.png)
   </details>
 
   <details>
@@ -479,8 +479,8 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
-  
-    ![alt text](app/assets/images/readme//users/readme-find_user-response.png)
+
+  ![alt text](app/assets/images/readme//users/readme-find_user-response.png)
   </details>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
