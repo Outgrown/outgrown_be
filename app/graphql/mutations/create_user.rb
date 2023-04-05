@@ -11,7 +11,6 @@ class Mutations::CreateUser < Mutations::BaseMutation
     if user.save
       { success: true, user: user, errors: [] }
     else
-      binding.pry
       { success: false, user: nil, errors: user.errors.full_messages }
     end
   end
