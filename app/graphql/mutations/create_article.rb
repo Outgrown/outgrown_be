@@ -22,7 +22,7 @@ class Mutations::CreateArticle < Mutations::BaseMutation
     if article.save
       { success: true, article: article, errors: [] }
     else
-      { success: false, user: nil, errors: article.errors.full_messages }
+      { success: false, article: nil, errors: article.errors.full_messages }
     end
   end
 end
