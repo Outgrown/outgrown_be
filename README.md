@@ -157,6 +157,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
+
     ![alt text](app/assets/images/readme/articles/readme-all_articles-response.png)
   </details>
 
@@ -214,6 +215,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
+
     ![alt text](app/assets/images/readme/articles/readme-create_article-response.png)
   </details>
 
@@ -255,6 +257,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
+
     ![alt text](app/assets/images/readme/articles/readme-find_article-response.png)
   </details>
 
@@ -297,6 +300,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
+
     ![alt text](app/assets/images/readme/articles/readme-find_articles-response.png)
   </details>
 
@@ -335,6 +339,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
+
     ![alt text](app/assets/images/readme/articles/readme-update_article_user-response.png)
   </details>
 
@@ -373,6 +378,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
+
     ![alt text](app/assets/images/readme/articles/readme-update_article_status-response.png)
   </details>
 
@@ -399,6 +405,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
+
     ![alt text](app/assets/images/readme/users/readme-all_users-response.png)
   </details>
 
@@ -430,6 +437,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
+
     ![alt text](app/assets/images/readme/users/readme-create_user-response.png)
   </details>
 
@@ -471,6 +479,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   ```
 
   Example Response:
+  
     ![alt text](app/assets/images/readme//users/readme-find_user-response.png)
   </details>
 
