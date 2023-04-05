@@ -16,8 +16,8 @@ class Mutations::UpdateArticleUser < Mutations::BaseMutation
       { success: true, article: article, errors: [] }
     else
       errors = []
-      errors << "unable to find user" if !user
-      errors << "unable to find article" if !article
+      errors << "unable to find user" unless user
+      errors << "unable to find article" unless article
       errors << "unable to trade unavailable article" if article && article[:status] != "available"
       { success: false, article: nil, errors: errors }
     end

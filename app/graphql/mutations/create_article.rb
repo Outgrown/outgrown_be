@@ -1,19 +1,19 @@
 class Mutations::CreateArticle < Mutations::BaseMutation
-  argument :name, String, required: true
-  argument :status, Integer, required: true
-  argument :image_link, String, required: true
-  argument :alt_image, String, required: true
-  argument :article_type, Integer, required: true
-  argument :age_group, Integer, required: true
-  argument :color, String, required: true
-  argument :gender, Integer, required: true
-  argument :condition, Integer, required: true
-  argument :description, String, required: true
-  argument :price, Integer, required: true
-  argument :user_id, Integer, required: true
+  argument :name, String, required: false
+  argument :status, Integer, required: false
+  argument :image_link, String, required: false
+  argument :alt_image, String, required: false
+  argument :article_type, Integer, required: false
+  argument :age_group, Integer, required: false
+  argument :color, String, required: false
+  argument :gender, Integer, required: false
+  argument :condition, Integer, required: false
+  argument :description, String, required: false
+  argument :price, Integer, required: false
+  argument :user_id, Integer, required: false
 
   field :success, Boolean, null: false
-  field :article, Types::ArticleType, null: false
+  field :article, Types::ArticleType, null: true
   field :errors, [String], null: false
 
   def resolve(**args)

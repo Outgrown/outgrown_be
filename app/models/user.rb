@@ -1,3 +1,5 @@
 class User < ApplicationRecord
-    has_many :articles
+  validates :name, presence: true
+
+  has_many :articles
 end
