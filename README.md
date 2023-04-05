@@ -1,9 +1,9 @@
 # README
 ## Outgrown BE
 
-A place built for those who pine, to leave pants and shirts from the past behind! 
-Trade articles of children's clothing with other users who see greater value in useable 
-clothing for their child(ren) over memories of how dirty they had gotten them!
+A marketplace built for those who pine, to leave pants and shirts from the past behind! <br>
+Trade articles of children's clothing with like minded shoppers who see greater value in obtaining useable 
+clothing for their child(ren) over hoarding piles of stuff that only serve to remind us of how dirty they had made them!
 
 <a name="readme-top"></a>
 
@@ -112,9 +112,376 @@ clothing for their child(ren) over memories of how dirty they had gotten them!
 
   ### Endpoints
 
-  - Organization: 'https://github.com/Outgrown'
+  - Organization: <br>
+  'https://github.com/Outgrown'
   - Try it now: <br>
-  'http://outgrown-be.herokuapp.com/graphiql'<br>
+  'http://outgrown-be.herokuapp.com/graphql'<br>
+  
+  ### Articles
+
+  <details>
+  <summary>All Articles</summary><br>
+  
+  ### All Articles: Query
+  ```js
+  query allArticles ($limit: Int) {
+    allArticles (limit: $limit) {
+      id
+      name
+      status
+      imageLink
+      altImage
+      articleType
+      ageGroup
+      color
+      gender
+      condition
+      description
+      price
+      user {
+          id
+          name
+          __typename
+      }
+      __typename
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "limit": 10
+  }
+  ```
+
+  Example Response:
+
+  ![alt text](app/assets/images/readme/articles/readme-all_articles-response.png)
+  </details>
+
+  <details>
+  <summary>Create Article</summary><br>
+  
+  ### Create Article: Mutation
+  ```js
+  mutation createArticle ($article: CreateArticleInput!) {
+    createArticle(input: $article) {
+      article {
+        id
+        name
+        status
+        imageLink
+        altImage
+        articleType
+        ageGroup
+        color
+        gender
+        condition
+        description
+        price
+        user {
+            id
+            name
+            __typename
+        }
+        __typename
+      }
+      errors
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "article": {
+        "name": "Krabby hamburger costume",
+        "status": 0,
+        "imageLink": "img_55575761.jpg",
+        "altImage": "This is an image",
+        "articleType": 0,
+        "ageGroup": 0,
+        "color": "Crab colored",
+        "gender": 0,
+        "condition": 2,
+        "description": "Tasty",
+        "price": 5,
+        "userId": 1
+    }
+  }
+  ```
+
+  Example Response:
+
+  ![alt text](app/assets/images/readme/articles/readme-create_article-response.png)
+  </details>
+
+  <details>
+  <summary>Find Article</summary><br>
+  
+  ### Find Article: Query
+  ```js
+  query findArticle($id: ID!) {
+    findArticle(id: $id) {
+      id
+      name
+      status
+      imageLink
+      altImage
+      articleType
+      ageGroup
+      color
+      gender
+      condition
+      description
+      price
+      user {
+          id
+          name
+          __typename
+      }
+      __typename
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "id": "2"
+  }
+  ```
+
+  Example Response:
+
+  ![alt text](app/assets/images/readme/articles/readme-find_article-response.png)
+  </details>
+
+  <details>
+  <summary>Find Articles</summary><br>
+  
+  ### Find Articles: Query
+  ```js
+  query findArticles($articleType: String!, $ageGroup: String!) {
+    findArticles(articleType: $articleType, ageGroup: $ageGroup) {
+      id
+      name
+      status
+      imageLink
+      altImage
+      articleType
+      ageGroup
+      color
+      gender
+      condition
+      description
+      price
+      user {
+          id
+          name
+          __typename
+      }
+      __typename
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "articleType": "tops",
+    "ageGroup": "toddler"
+  }
+  ```
+
+  Example Response:
+
+  ![alt text](app/assets/images/readme/articles/readme-find_articles-response.png)
+  </details>
+
+  <details>
+  <summary>Update Article Users</summary><br>
+  
+  ### Update Article Users: Mutation
+  ```js
+  mutation updateArticleUser ($article: UpdateArticleUserInput!) {
+    updateArticleUser(input: $article) {
+      article {
+          id
+          name
+          status
+          user {
+              id
+              name
+              __typename
+          }
+          __typename
+      }
+      errors
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "article": {
+        "id": "3",
+        "userId": "2"
+    }
+  }
+  ```
+
+  Example Response:
+
+  ![alt text](app/assets/images/readme/articles/readme-update_article_user-response.png)
+  </details>
+
+  <details>
+  <summary>Update Article Status</summary><br>
+  
+  ### Update Article Status: Mutation
+  ```js
+  mutation updateArticleStatus ($article: UpdateArticleStatusInput!) {
+    updateArticleStatus(input: $article) {
+      article {
+          id
+          name
+          status
+          user {
+              id
+              name
+              __typename
+          }
+          __typename
+      }
+      errors
+    }
+  }
+   ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "article": {
+        "id": "3",
+        "status": "available"
+    }
+  }
+  ```
+
+  Example Response:
+
+  ![alt text](app/assets/images/readme/articles/readme-update_article_status-response.png)
+  </details>
+
+  ### Users
+ 
+  <details>
+  <summary>All Users</summary><br>
+  
+  ### All Users: Query
+  ```js
+  query allUsers {
+    allUsers {
+        id
+        name
+        __typename
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {}
+  ```
+
+  Example Response:
+
+  ![alt text](app/assets/images/readme/users/readme-all_users-response.png)
+  </details>
+
+  <details>
+  <summary>Create User</summary><br>
+  
+  ### Create User: Mutation
+  ```js
+  mutation createUser ($user: CreateUserInput!) {
+    createUser(input: $user) {
+      user {
+          id
+          name
+          __typename
+      }
+      errors
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "user": {
+        "name": "Betty Sue Suggins"
+    }
+  }
+  ```
+
+  Example Response:
+
+  ![alt text](app/assets/images/readme/users/readme-create_user-response.png)
+  </details>
+
+  <details>
+  <summary>Find User</summary><br>
+  
+  ### Find User: Query
+  ```js
+  query findUser($id: ID!) {
+    findUser(id: $id) {
+      id
+      name
+      __typename
+      articles {
+        id
+        name
+        status
+        imageLink
+        altImage
+        articleType
+        ageGroup
+        color
+        gender
+        condition
+        description
+        price
+        __typename
+      }
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "id": "1"
+  }
+  ```
+
+  Example Response:
+
+  ![alt text](app/assets/images/readme//users/readme-find_user-response.png)
+  </details>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,11 +530,6 @@ clothing for their child(ren) over memories of how dirty they had gotten them!
   ### Project Managers-Instructors
 
   1. Juliet Eyraud
-  2. Brian Zanti
-
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Acknowledgments
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
