@@ -27,7 +27,7 @@ describe Types::QueryType, type: :request do
     expect(user[:data][:createUser][:user]).to have_key(:id)
     expect(user[:data][:createUser][:user]).to have_key(:name)
   end
-
+  
   it 'cannot create an user if it is missing information' do
     payload = {
       "query": "mutation createUser ($user: CreateUserInput!) { 
