@@ -148,6 +148,14 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   }
   ```
 
+  Example Variables:
+
+  ```sh
+  {
+    "limit": 10
+  }
+  ```
+
   Example Response:
     ![alt text](app/assets/images/readme/articles/readme-all_articles-response.png)
   </details>
@@ -180,6 +188,27 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
         __typename
       }
       errors
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "article": {
+        "name": "Krabby hamburger costume",
+        "status": 0,
+        "imageLink": "img_55575761.jpg",
+        "altImage": "This is an image",
+        "articleType": 0,
+        "ageGroup": 0,
+        "color": "Crab colored",
+        "gender": 0,
+        "condition": 2,
+        "description": "Tasty",
+        "price": 5,
+        "userId": 1
     }
   }
   ```
@@ -217,6 +246,14 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   }
   ```
 
+  Example Variables:
+
+  ```sh
+  {
+    "id": "2"
+  }
+  ```
+
   Example Response:
     ![alt text](app/assets/images/readme/articles/readme-find_article-response.png)
   </details>
@@ -250,6 +287,15 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   }
   ```
 
+  Example Variables:
+
+  ```sh
+  {
+    "articleType": "tops",
+    "ageGroup": "toddler"
+  }
+  ```
+
   Example Response:
     ![alt text](app/assets/images/readme/articles/readme-find_articles-response.png)
   </details>
@@ -273,6 +319,17 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
           __typename
       }
       errors
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "article": {
+        "id": "3",
+        "userId": "2"
     }
   }
   ```
@@ -304,6 +361,17 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   }
    ```
 
+  Example Variables:
+
+  ```sh
+  {
+    "article": {
+        "id": "3",
+        "status": "available"
+    }
+  }
+  ```
+
   Example Response:
     ![alt text](app/assets/images/readme/articles/readme-update_article_status-response.png)
   </details>
@@ -324,6 +392,12 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   }
   ```
 
+  Example Variables:
+
+  ```sh
+  {}
+  ```
+
   Example Response:
     ![alt text](app/assets/images/readme/users/readme-all_users-response.png)
   </details>
@@ -341,6 +415,16 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
           __typename
       }
       errors
+    }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "user": {
+        "name": "Betty Sue Suggins"
     }
   }
   ```
@@ -375,6 +459,14 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
         __typename
       }
     }
+  }
+  ```
+
+  Example Variables:
+
+  ```sh
+  {
+    "id": "1"
   }
   ```
 
