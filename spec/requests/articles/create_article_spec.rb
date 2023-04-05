@@ -106,4 +106,47 @@ describe Types::MutationType, type: :request do
     expect(article[:user]).to be_a(Hash)
     expect(article[:user][:id]).to eq(@article1[:user_id].to_s)
   end
+
+  it 'cannot create an article if it is missing information' do
+    payload = {
+      "query": "mutation createArticle ($article: CreateArticleInput!) { 
+        createArticle (input: $article) { 
+          article {
+            id
+            name
+            status
+            imageLink
+            altImage
+            articleType
+            ageGroup
+            color
+            gender
+            condition
+            description
+            price
+            user { id name } 
+          }
+        } 
+      }",
+      "variables": { "article": { 
+        "status": 0,
+        "imageLink": "img_55575761.jpg",
+        "altImage": "This is an image",
+        "articleType": 0,
+        "ageGroup": 0,
+        "color": "Crab colored",
+        "gender": 0,
+        "condition": 2,
+        "description": "Tasty",
+        "price": 5,
+        "userId": @user1.id } }
+    }
+
+    post '/graphql', headers: @headers, params: JSON.generate(payload)
+
+    article = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to be_successful
+    expect(article[:errors][0][:message]).to eq("Variable $article of type CreateArticleInput! was provided invalid value for name (Expected value to not be null)")
+  end
 end
