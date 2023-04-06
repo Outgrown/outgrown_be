@@ -126,6 +126,7 @@ describe Types::MutationType, type: :request do
             price
             user { id name } 
           }
+          errors
         } 
       }",
       "variables": { "article": { 
@@ -144,9 +145,12 @@ describe Types::MutationType, type: :request do
 
     post '/graphql', headers: @headers, params: JSON.generate(payload)
 
-    article = JSON.parse(response.body, symbolize_names: true)
+    article = JSON.parse(response.body, symbolize_names: true).dig(:data, :createArticle)
 
     expect(response).to be_successful
-    expect(article[:errors][0][:message]).to eq("Variable $article of type CreateArticleInput! was provided invalid value for name (Expected value to not be null)")
+    expect(article).to have_key(:article)
+    expect(article[:article]).to eq(nil)
+    expect(article).to have_key(:errors)
+    expect(article.dig(:errors, 0)).to eq("Name can't be blank")
   end
 end

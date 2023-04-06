@@ -14,7 +14,7 @@ class Mutations::UpdateArticleStatus < Mutations::BaseMutation
       { success: true, article: article, errors: [] }
     else
       errors = []
-      errors << "unable to find article" if !article
+      errors << "unable to find article" unless article
       errors << "unable to update article" if article && article[:status] != status
       { success: false, article: nil, errors: errors }
     end

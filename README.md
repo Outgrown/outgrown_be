@@ -70,10 +70,12 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     - [x] Queries: Articles<br>
     - [x] Mutations: Users<br>
     - [x] Mutations: Articles<br>
+    - [x] Testing: Queries<br>
+    - [x] Testing: Mutations<br>
   </details>
   <details>
     <summary>In Progress</summary>
-    - [ ] Testing
+    - [ ] Completion Party
   </details>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>

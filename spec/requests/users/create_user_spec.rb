@@ -27,22 +27,29 @@ describe Types::QueryType, type: :request do
     expect(user[:data][:createUser][:user]).to have_key(:id)
     expect(user[:data][:createUser][:user]).to have_key(:name)
   end
-  it 'errors when a name is not given' do
+  
+  it 'cannot create an user if it is missing information' do
     payload = {
-      "query": "mutation createUser ($user: CreateUserInput!) {
-            createUser (input: $user){
-              user {
-                id
-                name
-              }
-            }
-          }",
+      "query": "mutation createUser ($user: CreateUserInput!) { 
+        createUser (input: $user) { 
+          user { 
+            id 
+            name 
+          } 
+          errors
+        } 
+      }",
       "variables": { "user": {} }
     }
 
     post '/graphql', headers: @headers, params: JSON.generate(payload)
 
-    user = JSON.parse(response.body, symbolize_names: true)
-    expect(user[:errors][0][:message]).to eq("Variable $user of type CreateUserInput! was provided invalid value for name (Expected value to not be null)")
+    user = JSON.parse(response.body, symbolize_names: true).dig(:data, :createUser)
+
+    expect(response).to be_successful
+    expect(user).to have_key(:user)
+    expect(user[:user]).to eq(nil)
+    expect(user).to have_key(:errors)
+    expect(user.dig(:errors, 0)).to eq("Name can't be blank")
   end
 end
