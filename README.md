@@ -117,7 +117,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   - Organization: <br>
   'https://github.com/Outgrown'
   - Try it now: <br>
-  'http://outgrown-be.herokuapp.com/graphql'<br>
+  'https://outgrown.vercel.app/'<br>
   
   ### Articles
 
