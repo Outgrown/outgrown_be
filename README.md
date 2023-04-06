@@ -507,7 +507,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     <p align="center">
       Anthony Blackwell Tallent<br>
       <a href="https://github.com/anthonytallent">Github: anthonytallent</a><br>
-      <a href="https://www.linkedin.com/in/anthonytallent/">LinkedIn: anthonytallent</a>
+      <a href="https://www.linkedin.com/in/anthonytallent/">LinkedIn: Anthony Blackwell Tallent</a>
     </p>
   </div>
   <div align="center">
@@ -515,7 +515,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     <p align="center">
       Brandon Gray<br>
       <a href="https://github.com/bGray88">Github: bGray88</a><br>
-      <a href="https://www.linkedin.com/in/brandon-gray-67903689/">LinkedIn: bGray88</a>
+      <a href="https://www.linkedin.com/in/brandon-gray-67903689/">LinkedIn: Brandon Gray</a>
     </p>
   </div>
   <div align="center">
@@ -523,7 +523,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     <p align="center">
       William Lampke<br>
       <a href="https://github.com/WilliamLampke">Github: WilliamLampke</a><br>
-      <a href="https://www.linkedin.com/in/william-lampke-b4a5b5250/">LinkedIn: WilliamLampke</a>
+      <a href="https://www.linkedin.com/in/william-lampke-b4a5b5250/">LinkedIn: William Lampke</a>
     </p>
   </div>
 
@@ -547,7 +547,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   [Postgres-url]: https://www.postgresql.org/
   [Postman]: https://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white
   [Postman-url]: https://www.postman.com/
-  [Graphql]: https://img.shields.io/badge/-ApolloGraphQL-311C87?style=flat&logo=apollo-graphql
+  [Graphql]: https://shields.io/badge/GraphQL-e535ab?style=flat&logo=graphql&logoColor=FFF
   [Graphql-url]: https://graphql.org/
   [CircleCI]: https://img.shields.io/badge/circle%20ci-%23161616.svg?style=flat&logo=circleci&logoColor=white
   [CircleCI-url]: https://circleci.com/
