@@ -507,6 +507,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     <p align="center">
       Anthony Blackwell Tallent<br>
       <a href="https://github.com/anthonytallent">Github: anthonytallent</a>
+      <a href="https://www.linkedin.com/in/anthonytallent/">LinkedIn: anthonytallent</a>
     </p>
   </div>
   <div align="center">
@@ -514,6 +515,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     <p align="center">
       Brandon Gray<br>
       <a href="https://github.com/bGray88">Github: bGray88</a>
+      <a href="https://www.linkedin.com/in/brandon-gray-67903689/">LinkedIn: bGray88</a>
     </p>
   </div>
   <div align="center">
@@ -521,11 +523,13 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     <p align="center">
       William Lampke<br>
       <a href="https://github.com/WilliamLampke">Github: WilliamLampke</a>
+      <a href="https://www.linkedin.com/in/william-lampke-b4a5b5250/">LinkedIn: WilliamLampke</a>
     </p>
   </div>
 
   Project Links: <br> 
-  [Github](https://github.com/Outgrown/outgrown_be) <br>
+  [BackEnd Github](https://github.com/Outgrown/outgrown_be) <br>
+  [FrontEnd Github](https://github.com/Outgrown/outgrown_fe) <br>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
