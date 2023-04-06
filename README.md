@@ -506,7 +506,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     <img src="https://avatars.githubusercontent.com/u/113158442?v=4" alt="Profile" width="80" height="80">
     <p align="center">
       Anthony Blackwell Tallent<br>
-      <a href="https://github.com/anthonytallent">Github: anthonytallent</a>
+      <a href="https://github.com/anthonytallent">Github: anthonytallent</a><br>
       <a href="https://www.linkedin.com/in/anthonytallent/">LinkedIn: anthonytallent</a>
     </p>
   </div>
@@ -514,7 +514,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     <img src="https://avatars.githubusercontent.com/u/111726505?v=4" alt="Profile" width="80" height="80">
     <p align="center">
       Brandon Gray<br>
-      <a href="https://github.com/bGray88">Github: bGray88</a>
+      <a href="https://github.com/bGray88">Github: bGray88</a><br>
       <a href="https://www.linkedin.com/in/brandon-gray-67903689/">LinkedIn: bGray88</a>
     </p>
   </div>
@@ -522,7 +522,7 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
     <img src="https://avatars.githubusercontent.com/u/109244868?v=4" alt="Profile" width="80" height="80">
     <p align="center">
       William Lampke<br>
-      <a href="https://github.com/WilliamLampke">Github: WilliamLampke</a>
+      <a href="https://github.com/WilliamLampke">Github: WilliamLampke</a><br>
       <a href="https://www.linkedin.com/in/william-lampke-b4a5b5250/">LinkedIn: WilliamLampke</a>
     </p>
   </div>
