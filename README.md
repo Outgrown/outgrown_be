@@ -45,12 +45,10 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
   
   ### Production Links
   
-  Project Links: <br> 
-  
-  [Organization](https://github.com/Outgrown)<br>
-  [BackEnd Github](https://github.com/Outgrown/outgrown_be) <br>
-  [FrontEnd Github](https://github.com/Outgrown/outgrown_fe) <br>
-  [Try Out the App](https://outgrown.vercel.app/)<br>
+  * [Organization](https://github.com/Outgrown)<br>
+  * [BackEnd Github](https://github.com/Outgrown/outgrown_be) <br>
+  * [FrontEnd Github](https://github.com/Outgrown/outgrown_fe) <br>
+  * [Try Out the App](https://outgrown.vercel.app/)<br>
 
   ### Learning Goals
 
