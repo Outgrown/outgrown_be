@@ -42,6 +42,15 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 </details>
 
 ## About the Project
+  
+  ### Production Links
+  
+  Project Links: <br> 
+  
+  [Organization](https://github.com/Outgrown)<br>
+  [BackEnd Github](https://github.com/Outgrown/outgrown_be) <br>
+  [FrontEnd Github](https://github.com/Outgrown/outgrown_fe) <br>
+  [Try Out the App](https://outgrown.vercel.app/)<br>
 
   ### Learning Goals
 
@@ -113,11 +122,6 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
 ## Usage
 
   ### Endpoints
-
-  - Organization: <br>
-  'https://github.com/Outgrown'
-  - Try it now: <br>
-  'https://outgrown.vercel.app/'<br>
   
   ### Articles
 
@@ -526,10 +530,6 @@ clothing for their child(ren) over hoarding piles of stuff that only serve to re
       <a href="https://www.linkedin.com/in/william-lampke-b4a5b5250/">LinkedIn: William Lampke</a>
     </p>
   </div>
-
-  Project Links: <br> 
-  [BackEnd Github](https://github.com/Outgrown/outgrown_be) <br>
-  [FrontEnd Github](https://github.com/Outgrown/outgrown_fe) <br>
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
